@@ -13,10 +13,12 @@
 
     <div id="vueapp">
 
-      <span>名前: <input v-model="name" placeholder="Taro Yamada">  </span>
-      <span>コース: <input v-model="course" placeholder="機械学習コース">  </span>
-      <span>受講期: <input v-model="courseperiod" placeholder="2020年1月期"></span>
-      <button @click="addStudent">入力した生徒を追加する</button>
+      <div class="form">
+        <span>名前: <input v-model="name" placeholder="Taro Yamada">  </span><br>
+        <span>コース: <input v-model="course" placeholder="機械学習コース">  </span><br>
+        <span>受講期: <input v-model="courseperiod" placeholder="2020年1月期">  </span><br>
+        <button @click="addStudent">入力した生徒を追加する</button>
+      </div>
 
       <ul>
         <li v-for="student in students" :key="student.id">
