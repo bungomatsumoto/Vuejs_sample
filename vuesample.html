@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My first Vue app</title>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="vuesample.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+
+  <body>
+
+    <div id="vueapp">
+
+      <span>名前: <input v-model="name" placeholder="Taro Yamada">  </span>
+      <span>コース: <input v-model="course" placeholder="機械学習コース">  </span>
+      <span>受講期: <input v-model="courseperiod" placeholder="2020年1月期"></span>
+      <button @click="addStudent">入力した生徒を追加する</button>
+
+      <ul>
+        <li v-for="student in students" :key="student.id">
+          ID {{student.id}} /
+          名前 {{student.name}} /
+          コース  {{student.course}} /
+          受講期  {{student.courseperiod}}
+        </li>
+      </ul>
+
+    </div>
+
+    <script src="vuesample.js"></script>
+
+  </body>
+</html>
